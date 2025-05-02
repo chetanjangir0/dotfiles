@@ -46,7 +46,7 @@ input type:touchpad {
     bindsym $mod+w kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+space exec $menu
 
     # Drag floating windows
     floating_modifier $mod normal
@@ -63,6 +63,8 @@ input type:touchpad {
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
+
+    # commented because these were messing with browser shortcuts when mod is alt
     # Or use $mod+[up|down|left|right]
     # bindsym $mod+Left focus left
     # bindsym $mod+Down focus down
@@ -107,7 +109,7 @@ input type:touchpad {
    
 # Layout stuff:
     # You can "split" the current object of your focus
-    bindsym $mod+b splith
+    bindsym $mod+p splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -122,7 +124,7 @@ input type:touchpad {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+d focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -162,11 +164,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+
+include /etc/sway/config.d/*
+# custom settings ------------------------------ :)
+
 # Status Bar
 exec waybar
-
-# custom settings ------------------------------ :)
-include /etc/sway/config.d/*
 
 # wallpaper
 exec swaybg -i ~/.config/sway/wallpaper.jpg -m fill
@@ -195,7 +198,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # zen 
-bindsym $mod+z exec flatpak run app.zen_browser.zen
+bindsym $mod+b exec flatpak run app.zen_browser.zen
 
 # files
 bindsym $mod+n exec nautilus --no-desktop
