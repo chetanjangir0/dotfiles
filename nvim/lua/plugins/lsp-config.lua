@@ -9,7 +9,11 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls" },
+				ensure_installed = {
+					"lua_ls",
+					"ts_ls",
+					"rust_analyzer",
+				},
 			})
 		end,
 	},
@@ -17,22 +21,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-      -- Configure built-in diagnostic display
-      vim.diagnostic.config({
-        virtual_text = {
-          prefix = '●' -- Or any character you like
-        },
-        update_in_insert = true,
-        float = {
-          focusable = false,
-          style = "minimal",
-          border = "rounded",
-          source = "always",
-          header = "",
-          prefix = "",
-        },
-      })
+			local util = require("lspconfig/util")
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
@@ -44,10 +33,38 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+				filetypes = { "rust" },
+				root_dir = util.root_pattern("Cargo.toml"),
+				settings = {
+					["rust_analyzer"] = {
+						cargo = {
+							allFeatures = true,
+						},
+					},
+				},
+			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+
+			-- Configure built-in diagnostic display
+			vim.diagnostic.config({
+				virtual_text = {
+					prefix = "●", -- Or any character you like
+				},
+				update_in_insert = true,
+				float = {
+					focusable = false,
+					style = "minimal",
+					border = "rounded",
+					source = "always",
+					header = "",
+					prefix = "",
+				},
+			})
 		end,
 	},
 }
