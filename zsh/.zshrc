@@ -121,4 +121,4 @@ alias pnpm="load_nvm && pnpm"
 alias cat='batcat'
 alias la='ls -a'
 alias grep='rg'
-
+alias gitback='git add . && git commit -m "changes" && git push'
