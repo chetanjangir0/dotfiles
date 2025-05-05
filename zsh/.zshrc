@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+export PATH="$HOME/.cargo/bin:$PATH" # for cargo packages
 
 # Function to load nvm when needed
 load_nvm() {
