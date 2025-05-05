@@ -109,3 +109,4 @@ export NVM_DIR="$HOME/.nvm"
 
 alias cat='batcat'
 alias la='ls -a'
+alias grep='rg'
