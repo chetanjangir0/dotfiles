@@ -48,3 +48,6 @@ font-family = "CaskaydiaCove Nerd Font"
 font-size = 14.0
 selection-foreground = #1E1E2E
 selection-background = #F5E0DC
+
+# don't show resize text
+resize-overlay = never 
