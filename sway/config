@@ -10,7 +10,7 @@ set $up k
 set $right l
 
 # terminal emulator
-set $term ghostty
+set $term alacritty 
 
 # application launcher
 set $menu wofi --show drun
