@@ -1,3 +1,9 @@
+
+
+
+# nvm lazy load plugin so i don't get delay at terminal startup
+zstyle ':omz:plugins:nvm' lazy yes
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Path to your Oh My Zsh installation.
@@ -69,7 +75,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,22 +108,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-export PATH="$HOME/.cargo/bin:$PATH" # for cargo packages
-
-# Function to load nvm when needed
-load_nvm() {
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-  unset -f load_nvm # Remove the function after it's loaded
-}
-
-# Alias or function wrappers for nvm commands to trigger loading
-alias nvm="load_nvm && nvm"
-alias node="load_nvm && node"
-alias npm="load_nvm && npm"
-alias pnpm="load_nvm && pnpm"
+# Your cargo path export (keep this)
+export PATH="$HOME/.cargo/bin:$PATH"
 
 alias cat='batcat'
 alias la='ls -a'
