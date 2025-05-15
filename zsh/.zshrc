@@ -114,5 +114,17 @@ export PATH="$HOME/.cargo/bin:$PATH"
 alias cat='batcat'
 alias la='ls -a'
 alias grep='rg'
-alias gitback='git add . && git commit -m "changes" && git push'
 alias fs='yazi'
+
+# git aliases
+alias gs='git status --short'
+alias ga='git add'
+alias gc='git commit'
+alias gd='git diff'
+alias gp='git push'
+alias gu='git pull'
+alias gl='git log'
+alias gb='git branch'
+alias gi='git init'
+alias gcl='git clone'
+alias gk='git add . && git commit -m "changes" && git push'
