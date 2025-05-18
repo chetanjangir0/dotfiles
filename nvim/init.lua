@@ -8,7 +8,6 @@ vim.opt.wrap = false
 vim.opt.scrolloff = 8
 
 require("config.lazy")
-
 --syntax highlight for waybar config files
 vim.filetype.add({
   pattern = {
@@ -33,4 +32,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 --go to the other end of paranthesis
 vim.keymap.set("n", "<A-m>", "%", { noremap = true, silent = true })
-
