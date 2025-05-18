@@ -116,6 +116,9 @@ alias la='ls -a'
 alias grep='rg'
 alias fs='yazi'
 
+# use neovim as default editor for commands like crontab -e
+export VISUAL=nvim
+
 # git aliases
 alias gs='git status --short'
 alias ga='git add'
