@@ -115,6 +115,7 @@ alias cat='batcat'
 alias la='ls -a'
 alias grep='rg'
 alias fs='yazi'
+alias ff='fastfetch'
 
 # use neovim as default editor for commands like crontab -e
 export VISUAL=nvim
@@ -131,3 +132,4 @@ alias gb='git branch'
 alias gi='git init'
 alias gcl='git clone'
 alias gk='git add . && git commit -m "changes" && git push'
+
