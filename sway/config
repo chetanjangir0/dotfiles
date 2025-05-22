@@ -36,6 +36,11 @@ input type:touchpad {
   pointer_accel 0.2
 }
 
+# keyboard: i use kanata now so no need
+# input "type:keyboard" {
+#     xkb_options "caps:escape"
+# }
+
 ### Key bindings
 
 # Basics:
