@@ -37,9 +37,9 @@ input type:touchpad {
 }
 
 # keyboard: i use kanata now so no need
-# input "type:keyboard" {
-#     xkb_options "caps:escape"
-# }
+input "type:keyboard" {
+    xkb_options "caps:escape"
+}
 
 ### Key bindings
 
