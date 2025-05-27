@@ -134,4 +134,4 @@ alias gb='git branch'
 alias gi='git init'
 alias gcl='git clone'
 alias gk='git add . && git commit -m "changes" && git push'
-
+alias music='termusic'
