@@ -52,7 +52,7 @@ return {
           gopls = {
             completeUnimported = true,
             usePlaceholders = true,
-            analyse = {
+            analyses = {
               unusedparams = true,
             },
           },
