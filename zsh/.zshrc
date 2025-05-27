@@ -108,8 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Your cargo path export (keep this)
+# custom binary paths 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+
 
 alias cat='batcat'
 alias la='ls -a'
