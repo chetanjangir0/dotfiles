@@ -25,3 +25,9 @@ ln -sf $dots/tmux $config/tmux
 ln -sf $dots/waybar $config/waybar
 ln -sf $dots/wofi $config/wofi
 ln -sf $dots/zsh/.zshrc ~/.zshrc
+
+# for keyd config first install keyd
+sudo rm -rf /etc/keyd # make it for every link because if directory exists it places the link inside
+sudo ln -sf $dots/keyd /etc/keyd
+sudo systemctl enable keyd     # Enable to run at boot
+sudo systemctl start keyd      # Start immediately for the current session

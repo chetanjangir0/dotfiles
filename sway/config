@@ -36,10 +36,10 @@ input type:touchpad {
   pointer_accel 0.2
 }
 
-# keyboard: i use kanata now so no need
-input "type:keyboard" {
-    xkb_options "caps:escape"
-}
+# keyboard: i use keyd now so no need
+# input "type:keyboard" {
+#     xkb_options "caps:escape"
+# }
 
 ### Key bindings
 
@@ -177,7 +177,7 @@ include /etc/sway/config.d/*
 exec waybar
 
 # wallpaper
-exec swaybg -i ~/.config/sway/wallpaper.jpg -m fill
+exec swaybg -i ~/.config/sway/wallpaper.png -m fill
 
 # borders
 default_border pixel 2
