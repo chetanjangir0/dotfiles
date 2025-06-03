@@ -177,7 +177,7 @@ include /etc/sway/config.d/*
 exec waybar
 
 # wallpaper
-exec swaybg -i ~/.config/sway/wallpaper.png -m fill
+exec swaybg -i ~/.config/sway/mandelbrot_side_maroon.png -m fill
 
 # borders
 default_border pixel 2
