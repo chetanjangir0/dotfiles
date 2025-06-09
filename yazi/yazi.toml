@@ -1,0 +1,10 @@
+
+[opener]
+vlc = [
+  { run = 'flatpak run org.videolan.VLC "$@"', orphan = true, desc = "VLC Flatpak" }
+]
+
+[open]
+rules = [
+  { mime = "video/*", use = ["vlc"] }
+]
