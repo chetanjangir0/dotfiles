@@ -1,5 +1,31 @@
 {
   "keyMappings": "# Insert your preferred key mappings here.\nmap J nextTab\nmap K previousTab",
   "grabBackFocus": true,
-  "settingsVersion": "2.2.1"
+  "settingsVersion": "2.2.1",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "r",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "i",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "t",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "f",
+      "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://monkeytype.com/*"
+    }
+  ]
 }
