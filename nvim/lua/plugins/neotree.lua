@@ -9,7 +9,7 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			window = {
-				width = 25,
+				width = 32,
 			},
 		})
 		vim.keymap.set("n", "<leader>t", ":Neotree filesystem reveal right<CR>", {})
