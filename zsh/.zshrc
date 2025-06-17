@@ -135,3 +135,16 @@ alias gi='git init'
 alias gcl='git clone'
 alias gk='git add . && git commit -m "changes" && git push'
 alias music='termusic'
+
+
+proj() {
+  DIR=$(find ~/projects -mindepth 1 -maxdepth 1 -type d | fzf)
+  [ -z "$DIR" ] && return
+  SESSION=$(basename "$DIR")
+  tmux has-session -t "$SESSION" 2>/dev/null
+  if [ $? != 0 ]; then
+    tmux new-session -d -s "$SESSION" -c "$DIR" 'nvim'
+    tmux new-window -t "$SESSION:" -c "$DIR"
+  fi
+  tmux attach -t "$SESSION"
+}
