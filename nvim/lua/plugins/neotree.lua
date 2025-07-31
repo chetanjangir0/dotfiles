@@ -11,6 +11,14 @@ return {
 			window = {
 				width = 32,
 			},
+			event_handlers = {
+				{
+					event = "file_opened",
+					handler = function(_)
+						require("neo-tree.command").execute({ action = "close" })
+					end,
+				},
+			},
 		})
 		vim.keymap.set("n", "<leader>t", ":Neotree filesystem reveal right<CR>", {})
 	end,
