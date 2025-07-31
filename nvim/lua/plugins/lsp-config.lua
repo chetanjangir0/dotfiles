@@ -71,7 +71,9 @@ return {
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-			vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+			vim.keymap.set("n", "<leader>dm", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+			-- vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, { buffer = 0 })
+			-- vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
 
 			-- Configure built-in diagnostic display
 			vim.diagnostic.config({
