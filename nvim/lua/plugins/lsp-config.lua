@@ -26,15 +26,36 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local util = require("lspconfig/util")
 
+			local lsp_keymaps = function()
+				vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+				vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+				vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+				vim.keymap.set(
+					"n",
+					"<leader>dm",
+					vim.diagnostic.open_float,
+					{ desc = "Open floating diagnostic message" }
+				)
+
+				vim.keymap.set("n", "<leader>dl", require("telescope.builtin").diagnostics, { buffer = 0 })
+				vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { buffer = 0 })
+				-- vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, { buffer = 0 })
+				-- vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
+			end
+
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
+				on_attach = lsp_keymaps,
 			})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
+                on_attach = lsp_keymaps,
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
+                on_attach = lsp_keymaps,
 				filetypes = { "rust" },
 				root_dir = util.root_pattern("Cargo.toml"),
 				settings = {
@@ -47,6 +68,7 @@ return {
 			})
 			lspconfig.gopls.setup({
 				capabilities = capabilities,
+                on_attach = lsp_keymaps,
 				filetypes = { "go", "gomod", "gowork", "gotmpl" },
 				root_dir = util.root_pattern("go.work", "go.mod", ".git"),
 				settings = {
@@ -61,19 +83,13 @@ return {
 			})
 			lspconfig.tinymist.setup({
 				capabilities = capabilities,
+                on_attach = lsp_keymaps,
 				settings = {
 					formatterMode = "typstyle",
 					exportPdf = "never",
 				},
 			})
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-			vim.keymap.set("n", "<leader>dm", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-			-- vim.keymap.set("n", "<leader>df", vim.diagnostic.goto_next, { buffer = 0 })
-			-- vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, { buffer = 0 })
 
 			-- Configure built-in diagnostic display
 			vim.diagnostic.config({

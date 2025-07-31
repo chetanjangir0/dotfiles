@@ -12,7 +12,6 @@ return {
 				builtin.find_files({ hidden = true })
 			end, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>dl", builtin.diagnostics, {})
 
 			require("telescope").setup({
 				extensions = {
