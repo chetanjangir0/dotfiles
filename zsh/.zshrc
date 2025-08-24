@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # custom binary paths 
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
-
+export PATH="/opt/zig:$PATH" # todo change this path to /usr/local/bin so that sudo can also use it 
 
 alias cat='batcat'
 alias la='ls -a'
