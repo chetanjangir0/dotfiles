@@ -23,7 +23,7 @@ return {
 				null_ls.builtins.formatting.stylua,
 
 				null_ls.builtins.formatting.prettier,
-				require("none-ls.diagnostics.eslint_d").with{condition=has_eslint},
+				require("none-ls.diagnostics.eslint").with{condition=has_eslint},
 			},
 		})
 	end,
