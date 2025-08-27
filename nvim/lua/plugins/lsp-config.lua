@@ -16,6 +16,8 @@ return {
 					"rust_analyzer",
 					"gopls",
 					"tinymist",
+                    "tailwindcss",
+                    "eslint"
 				},
 			})
 		end,
@@ -45,14 +47,15 @@ return {
 			end
 
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-				on_attach = lsp_keymaps,
-			})
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-                on_attach = lsp_keymaps,
-			})
+
+            local servers = {"lua_ls", "ts_ls", "tailwindcss", "eslint"}
+            for _,lsp in ipairs(servers) do
+                lspconfig[lsp].setup{
+                    capabilities = capabilities,
+                    on_attach = lsp_keymaps,
+                }
+            end
+
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
                 on_attach = lsp_keymaps,
@@ -89,7 +92,6 @@ return {
 					exportPdf = "never",
 				},
 			})
-
 
 			-- Configure built-in diagnostic display
 			vim.diagnostic.config({
