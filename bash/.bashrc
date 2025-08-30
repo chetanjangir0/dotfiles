@@ -118,3 +118,5 @@ fi
 . "$HOME/.cargo/env"
 
 alias cat='batcat'
+
+. "$HOME/.local/bin/env"

@@ -147,3 +147,5 @@ proj() {
   fi
   tmux attach -t "$SESSION"
 }
+
+. "$HOME/.local/bin/env"
