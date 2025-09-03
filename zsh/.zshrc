@@ -134,10 +134,11 @@ alias gi='git init'
 alias gcl='git clone'
 alias gk='git add . && git commit -m "changes" && git push'
 alias music='termusic'
+alias bb='blueboy'
 
 
 proj() {
-  DIR=$(find ~/projects -mindepth 1 -maxdepth 1 -type d | fzf)
+  DIR=$(find ~/projects ~/resume -mindepth 1 -maxdepth 1 -type d | fzf)
   [ -z "$DIR" ] && return
   SESSION=$(basename "$DIR")
   tmux has-session -t "$SESSION" 2>/dev/null
