@@ -31,3 +31,5 @@ style = "Regular"
 import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+[colors.primary]
+background = "0x000000"
