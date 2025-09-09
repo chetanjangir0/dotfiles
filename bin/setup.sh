@@ -17,9 +17,10 @@ echo "📦 Detected: $DISTRO"
 
 # --- Install base tools ---
 if [ "$DISTRO" = "arch" ]; then
-    sudo pacman -Syu --noconfirm
-    sudo pacman -S --noconfirm base-devel git stow flatpak curl
+    sudo pacman -Syu --noconfirm || echo "❌ Failed to update Arch packages" >&2
+    sudo pacman -S --noconfirm base-devel git stow flatpak curl || echo "❌ Failed to install base packages" >&2
     if ! command -v paru &>/dev/null; then
+        echo "✨ Installing paru from AUR..."
         git clone https://aur.archlinux.org/paru.git
         cd paru && makepkg -si --noconfirm && cd ..
         rm -rf paru
@@ -38,7 +39,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # --- Install packages from pkglist.txt ---
 echo "📂 Installing from pkglist.txt..."
 if [ "$DISTRO" = "arch" ]; then
-    paru -S --needed - < pkglist.txt
+    paru -S --needed - < pkglist.txt || echo "❌ Failed to install Arch packages" >&2
 elif [ "$DISTRO" = "debian" ]; then
     xargs -a pkglist.txt sudo apt install -y
 elif [ "$DISTRO" = "fedora" ]; then
