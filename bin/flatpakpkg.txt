@@ -1,0 +1,5 @@
+app.zen_browser.zen
+com.obsproject.Studio
+eu.betterbird.Betterbird
+md.obsidian.Obsidian
+org.kde.kdenlive
