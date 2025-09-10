@@ -17,7 +17,8 @@ return {
 					"gopls",
 					"tinymist",
                     "tailwindcss",
-                    "eslint"
+                    "eslint",
+                    "marksman"
 				},
 			})
 		end,
@@ -48,7 +49,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-            local servers = {"lua_ls", "ts_ls", "tailwindcss", "eslint"}
+            local servers = {"lua_ls", "ts_ls", "tailwindcss", "eslint", "marksman"}
             for _,lsp in ipairs(servers) do
                 lspconfig[lsp].setup{
                     capabilities = capabilities,
