@@ -13,4 +13,11 @@ resize-overlay = never
 background = "#000000"
 
 # cursor
+cursor-style = block
 cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# character under the cusror looked a bit indistinguitable
+cursor-invert-fg-bg = false
+cursor-text = "#000000"
+
