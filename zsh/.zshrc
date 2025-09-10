@@ -118,6 +118,10 @@ alias la='ls -a'
 alias fs='yazi'
 alias ff='fastfetch'
 
+# vi mode in zsh
+bindkey -v 
+export KEYTIMEOUT=1
+
 # use neovim as default editor for commands like crontab -e
 export VISUAL=nvim
 

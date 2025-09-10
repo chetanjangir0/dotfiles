@@ -1,5 +1,5 @@
 theme = catppuccin-mocha
-background-opacity = 0.8
+# background-opacity = 0.8
 
 font-family = "CaskaydiaCove Nerd Font"
 font-size = 14.0
@@ -8,3 +8,9 @@ selection-background = #F5E0DC
 
 # don't show resize text
 resize-overlay = never 
+
+# background
+background = "#000000"
+
+# cursor
+cursor-style-blink = false
