@@ -33,3 +33,4 @@ yazi
 typst
 ly
 zsh
+mutt-wizard
