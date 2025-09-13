@@ -34,3 +34,4 @@ typst
 ly
 zsh
 mutt-wizard
+stow
