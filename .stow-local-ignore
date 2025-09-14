@@ -23,8 +23,9 @@ _darcs
 ^/COPYING
 
 #custom
-^scripts/$
-^browser/$
-^ly/$
-^keyd/$
-^zen/$
+scripts
+browser
+ly
+keyd
+zen
+.luarc.json
