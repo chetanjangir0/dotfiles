@@ -35,3 +35,5 @@ ly
 zsh
 mutt-wizard
 stow
+zathura
+zathura-pdf-poppler

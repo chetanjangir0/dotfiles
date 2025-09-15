@@ -4,7 +4,13 @@ vlc = [
   { run = 'flatpak run org.videolan.VLC "$@"', orphan = true, desc = "VLC Flatpak" }
 ]
 
+
+zathura = [
+  { run = 'zathura "$@"', orphan = true, desc = "Zathura PDF Reader" }
+]
+
 [open]
 rules = [
-  { mime = "video/*", use = ["vlc"] }
+  { mime = "video/*", use = ["vlc"] },
+  { mime = "application/pdf", use = ["zathura"] }
 ]
