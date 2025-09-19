@@ -37,3 +37,4 @@ mutt-wizard
 stow
 zathura
 zathura-pdf-poppler
+posting
