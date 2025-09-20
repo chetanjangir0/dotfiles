@@ -38,3 +38,4 @@ stow
 zathura
 zathura-pdf-poppler
 posting
+rofi-wayland

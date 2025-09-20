@@ -13,7 +13,7 @@ set $right l
 set $term alacritty 
 
 # application launcher
-set $menu wofi --show drun
+set $menu rofi -show drun
 
 include /etc/sway/config-vars.d/*
 
