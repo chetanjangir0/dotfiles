@@ -27,7 +27,7 @@ configuration {
     action: "kb-cancel";
   }
     kb-remove-to-eol: "";
-    kb-accept-entry: "";
+    kb-accept-entry: "Return";
     kb-row-down: "Control+j";
     kb-row-up: "Control+k";
 }
