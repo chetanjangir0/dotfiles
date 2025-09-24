@@ -40,7 +40,7 @@ return {
                     { desc = "Open floating diagnostic message" }
                 )
                 vim.keymap.set("n", "<leader>dl", require("telescope.builtin").diagnostics, { buffer = 0 })
-                vim.keymap.set("n", "<leader>rf", require("telescope.builtin").lsp_references, { buffer = 0 })
+                vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { buffer = 0 })
             end
 
             -- Configuration for LSP servers
