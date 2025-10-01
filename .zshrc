@@ -139,6 +139,7 @@ alias gcl='git clone'
 alias gk='git add . && git commit -m "changes" && git push'
 alias music='termusic'
 alias bb='blueboy'
+alias bt='bluetoothctl connect 98:47:44:15:9D:6A'
 
 
 proj() {
