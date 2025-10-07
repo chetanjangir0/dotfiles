@@ -1,7 +1,7 @@
 {
   "keyMappings": "# Insert your preferred key mappings here.\nmap J nextTab\nmap K previousTab",
   "grabBackFocus": true,
-  "settingsVersion": "2.2.1",
+  "settingsVersion": "2.3",
   "exclusionRules": [
     {
       "passKeys": "",
@@ -26,6 +26,14 @@
     {
       "passKeys": "",
       "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://employment.livelihoods.rajasthan.gov.in/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://eyglobal.yello.co/*"
     }
   ]
 }
