@@ -18,7 +18,10 @@ return {
                     "tinymist",
                     "tailwindcss",
                     "eslint",
-                    "marksman"
+                    "marksman",
+
+                    -- nix languge
+                    "nil_ls",
                 },
             })
         end,
@@ -45,6 +48,7 @@ return {
 
             -- Configuration for LSP servers
             local lsps = {
+                { "nil_ls" },
                 { "lua_ls" },
                 { "ts_ls" },
                 { "tailwindcss" },
