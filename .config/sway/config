@@ -10,7 +10,7 @@ set $up k
 set $right l
 
 # terminal emulator
-set $term alacritty 
+set $term ghostty 
 
 # application launcher
 set $menu rofi -show drun
@@ -187,10 +187,10 @@ gaps inner 5
 smart_gaps on
 
 # Increase screen brightness
-bindsym XF86MonBrightnessUp exec light -s sysfs/backlight/intel_backlight -A 10
+bindsym XF86MonBrightnessUp exec brightnessctl set +10% 
 
 # Decrease screen brightness
-bindsym XF86MonBrightnessDown exec light -s sysfs/backlight/intel_backlight -U 10
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 # Increase volume (max 120%)
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
