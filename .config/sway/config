@@ -28,12 +28,17 @@ include /etc/sway/config-vars.d/*
 # trackpad:
 input type:touchpad {
 	dwt enabled
-  tap enabled
-  natural_scroll enabled
-  middle_emulation enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
 	scroll_factor 0.2
-  accel_profile adaptive
-  pointer_accel 0.2
+    accel_profile adaptive
+    pointer_accel 0.2
+
+    #to fix draglock when selecting text
+    tap enabled
+    drag enabled
+    drag_lock disabled
 }
 
 # keyboard: i use keyd now so no need
