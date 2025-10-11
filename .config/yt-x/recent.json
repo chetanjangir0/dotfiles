@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "_type": "url",
+      "ie_key": "Youtube",
+      "id": "ydBrfxBzwQo",
+      "url": "https://www.youtube.com/watch?v=ydBrfxBzwQo",
+      "title": "NixOS Review - Can You Handle This Linux Powerhouse?",
+      "description": null,
+      "duration": 347.0,
+      "channel_id": "UC4m4jfyM0VrEdNkf7ZtRx9g",
+      "channel": "CodingBite",
+      "channel_url": "https://www.youtube.com/channel/UC4m4jfyM0VrEdNkf7ZtRx9g",
+      "uploader": "CodingBite",
+      "uploader_id": "@CodingBite",
+      "uploader_url": "https://www.youtube.com/@CodingBite",
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/ydBrfxBzwQo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYBAudMk43ZDrk02v7QOx0tIjJNA",
+          "height": 202,
+          "width": 360
+        },
+        {
+          "url": "https://i.ytimg.com/vi/ydBrfxBzwQo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAW6VrA0eN30mfTlthpuoS_SWu4Yw",
+          "height": 404,
+          "width": 720
+        }
+      ],
+      "timestamp": 1728691200,
+      "release_timestamp": null,
+      "availability": null,
+      "view_count": 10562,
+      "live_status": null,
+      "channel_is_verified": null,
+      "__x_forwarded_for_ip": null
+    }
+  ]
+}
