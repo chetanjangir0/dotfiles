@@ -1,4 +1,4 @@
-obs-studio/logs/
-obs-studio/crashes/
-obs-studio/plugin_config/
-obs-studio/service.json
+.config/obs-studio/logs/
+.config/obs-studio/crashes/
+.config/obs-studio/plugin_config/
+.config/obs-studio/service.json
