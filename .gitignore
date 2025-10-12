@@ -1,4 +1,7 @@
+# OBS Studio (exclude transient + sensitive data)
 .config/obs-studio/logs/
 .config/obs-studio/crashes/
 .config/obs-studio/plugin_config/
+.config/obs-studio/profiler_data/
+.config/obs-studio/updates/
 .config/obs-studio/service.json
