@@ -14,7 +14,7 @@
         "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
-        "muted": false,
+        "muted": true,
         "push-to-mute": false,
         "push-to-mute-delay": 0,
         "push-to-talk": false,
@@ -42,7 +42,7 @@
         "mixers": 255,
         "sync": 0,
         "flags": 0,
-        "volume": 0.645804226398468,
+        "volume": 0.1856980323791504,
         "balance": 0.5,
         "enabled": true,
         "muted": false,
@@ -233,6 +233,10 @@
             "autoStartRecordTimer": false,
             "pauseRecordTimer": true
         }
+    },
+    "resolution": {
+        "x": 2560,
+        "y": 1600
     },
     "version": 2
 }
