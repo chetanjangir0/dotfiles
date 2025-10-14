@@ -1,7 +1,8 @@
 
 [opener]
 vlc = [
-  { run = 'flatpak run org.videolan.VLC "$@"', orphan = true, desc = "VLC Flatpak" }
+  # { run = 'flatpak run org.videolan.VLC "$@"', orphan = true, desc = "VLC Flatpak" }
+  { run = 'vlc "$@"', orphan = true, desc = "VLC" }
 ]
 
 
