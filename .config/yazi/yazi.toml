@@ -10,8 +10,13 @@ zathura = [
   { run = 'zathura "$@"', orphan = true, desc = "Zathura PDF Reader" }
 ]
 
+nsxiv = [
+  { run = 'nsxiv "$@"', orphan = true, desc = "nsxiv Image Viewer" }
+]
+
 [open]
 rules = [
   { mime = "video/*", use = ["vlc"] },
-  { mime = "application/pdf", use = ["zathura"] }
+  { mime = "application/pdf", use = ["zathura"] },
+  { mime = "image/*", use = ["nsxiv"] }
 ]
