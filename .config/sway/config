@@ -226,3 +226,5 @@ exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLA
 ## Start xdg-desktop-portal services (ensure wlr starts first)
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr &
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+
+bindsym $mod+t exec rofi -dmenu -p "ChatGPT:" | xargs -I {} xdg-open "https://chat.openai.com/?q={}"
