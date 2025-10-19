@@ -1,31 +1,31 @@
 return {
-    {
-        "williamboman/mason.nvim",
-        config = function()
-            require("mason").setup()
-        end,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        lazy = false,
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "ts_ls",
-                    "rust_analyzer",
-                    "gopls",
-                    "tinymist",
-                    "tailwindcss",
-                    "eslint",
-                    "marksman",
-
-                    -- nix languge
-                    "nil_ls",
-                },
-            })
-        end,
-    },
+    -- {
+    --     "williamboman/mason.nvim",
+    --     config = function()
+    --         require("mason").setup()
+    --     end,
+    -- },
+    -- {
+    --     "williamboman/mason-lspconfig.nvim",
+    --     lazy = false,
+    --     config = function()
+    --         require("mason-lspconfig").setup({
+    --             ensure_installed = {
+    --                 "lua_ls",
+    --                 "ts_ls",
+    --                 "rust_analyzer",
+    --                 "gopls",
+    --                 "tinymist",
+    --                 "tailwindcss",
+    --                 "eslint",
+    --                 "marksman",
+    --
+    --                 -- nix languge
+    --                 "nil_ls",
+    --             },
+    --         })
+    --     end,
+    -- },
     {
         "neovim/nvim-lspconfig",
         config = function()
