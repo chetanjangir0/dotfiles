@@ -112,12 +112,12 @@ button {
 }
 
 #clock {
-    border-bottom: 1px solid @sky;
-    color: @sky;
+    /* border-bottom: 1px solid @sky; */
+    color: white;
 }
 #clock.date {
-    border-bottom: 1px solid @mauve;
-    color: @mauve;
+    /* border-bottom: 1px solid @mauve; */
+    color: white;
 }
 #battery {
     border-bottom: 1px solid @green;
