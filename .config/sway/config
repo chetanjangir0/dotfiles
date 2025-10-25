@@ -228,3 +228,6 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr &
 exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 
 bindsym $mod+t exec rofi -dmenu -p "ChatGPT:" | xargs -I {} xdg-open "https://chat.openai.com/?q={}"
+
+# hide the mouse pointer after 3 seconds
+seat seat0 hide_cursor 3000
