@@ -120,7 +120,7 @@ button {
     color: white;
 }
 #battery {
-    border-bottom: 1px solid @green;
+    /* border-bottom: 1px solid @green; */
     color: @green;
 }
 
@@ -151,17 +151,17 @@ label:focus {
 }
 
 #memory {
-    border-bottom: 1px solid  @peach;
+    /* border-bottom: 1px solid  @peach; */
     color: @peach;
 }
 
 #backlight {
-    border-bottom: 1px solid @teal;
+    /* border-bottom: 1px solid @teal; */
     color: @teal;
 }
 
 #network {
-    border-bottom: 1px solid @yellow;
+    /* border-bottom: 1px solid @yellow; */
     color: @yellow;
 
 }
@@ -171,7 +171,7 @@ label:focus {
 }
 
 #pulseaudio {
-    border-bottom: 1px solid @blue;
+    /* border-bottom: 1px solid @blue; */
     color: @blue;
 }
 
