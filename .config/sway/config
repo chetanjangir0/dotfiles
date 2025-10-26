@@ -231,3 +231,8 @@ bindsym $mod+t exec rofi -dmenu -p "ChatGPT:" | xargs -I {} xdg-open "https://ch
 
 # hide the mouse pointer after 3 seconds
 seat seat0 hide_cursor 3000
+
+# open specific programs in their own workspace
+for_window [app_id="eu.betterbird.Betterbird"] move to workspace 3
+for_window [app_id="obsidian"] move to workspace 4
+for_window [app_id="zen"] move to workspace 1
