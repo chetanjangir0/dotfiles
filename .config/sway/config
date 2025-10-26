@@ -208,10 +208,10 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # zen 
-bindsym $mod+b exec flatpak run app.zen_browser.zen
+bindsym $mod+b exec zen
 
 # files
-bindsym $mod+n exec nautilus --no-desktop
+bindsym $mod+n exec cosmic-files --no-desktop
 
 # logout
 bindsym Control+Mod1+Delete exec "swaymsg exit"
