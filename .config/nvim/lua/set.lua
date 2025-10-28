@@ -26,3 +26,5 @@ vim.opt.updatetime = 50
 vim.opt.ignorecase = true
 vim.opt.shiftwidth = 4 -- number of spaces used when using >>
 vim.opt.termguicolors = true
+
+vim.opt.smartindent = true
