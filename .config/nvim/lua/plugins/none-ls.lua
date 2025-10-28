@@ -22,8 +22,8 @@ return {
 				-- require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
-                null_ls.builtins.formatting.nixfmt,
-				require("none-ls.diagnostics.eslint").with{condition=has_eslint},
+				null_ls.builtins.formatting.nixfmt,
+				require("none-ls.diagnostics.eslint").with({ condition = has_eslint }),
 			},
 		})
 	end,
