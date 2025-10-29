@@ -23,10 +23,10 @@ configuration {
     display-name: "[*.*]";
   }
 
-  timeout {
-    delay: 10;
-    action: "kb-cancel";
-  }
+  // timeout {
+  //   delay: 10;
+  //   action: "kb-cancel";
+  // }
     kb-remove-to-eol: "";
     kb-accept-entry: "Return";
     kb-row-down: "Control+j";
