@@ -230,7 +230,7 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 bindsym $mod+t exec rofi -dmenu -p "ChatGPT:" | xargs -I {} xdg-open "https://chat.openai.com/?q={}"
 
 # hide the mouse pointer after 3 seconds
-seat seat0 hide_cursor 3000
+# seat seat0 hide_cursor 3000
 
 # open specific programs in their own workspace
 for_window [app_id="eu.betterbird.Betterbird"] move to workspace 3
