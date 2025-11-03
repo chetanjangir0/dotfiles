@@ -193,9 +193,11 @@ smart_gaps on
 
 # Increase screen brightness
 bindsym XF86MonBrightnessUp exec brightnessctl set +10% 
+bindsym Shift+XF86MonBrightnessUp exec brightnessctl set +1%
 
 # Decrease screen brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym Shift+XF86MonBrightnessDown exec brightnessctl set 1%-
 
 # Increase volume (max 120%)
 # bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
