@@ -23,7 +23,7 @@ return {
 				},
 				window = {
 					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
+					-- documentation = cmp.config.window.bordered(), #rust window overlapping so i turned it off
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
