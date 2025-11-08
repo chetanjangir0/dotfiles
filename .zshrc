@@ -1,6 +1,3 @@
-
-
-
 # nvm lazy load plugin so i don't get delay at terminal startup
 # zstyle ':omz:plugins:nvm' lazy yes
 
@@ -113,6 +110,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="/opt/zig:$PATH" # todo change this path to /usr/local/bin so that sudo can also use it 
 
+# my scripts
+export PATH="$HOME/scripts:$PATH"
+
+
 alias la='ls -a'
 alias fs='yazi'
 alias ff='fastfetch'
@@ -123,6 +124,9 @@ export KEYTIMEOUT=1
 
 # use neovim as default editor for commands like crontab -e
 export VISUAL=nvim
+
+# sessionizer shortcut
+bindkey -s ^f "tmux-sessionizer\n"
 
 # git aliases
 alias gs='git status --short'
@@ -140,18 +144,3 @@ alias music='termusic'
 alias bb='blueboy'
 alias bt='bluetoothctl connect 98:47:44:15:9D:6A'
 alias rebuild='sudo nixos-rebuild switch --flake .#laptop'
-
-
-proj() {
-  DIR=$(find ~/projects ~/resume -mindepth 1 -maxdepth 1 -type d | fzf)
-  [ -z "$DIR" ] && return
-  SESSION=$(basename "$DIR")
-  tmux has-session -t "$SESSION" 2>/dev/null
-  if [ $? != 0 ]; then
-    tmux new-session -d -s "$SESSION" -c "$DIR" 'nvim'
-    tmux new-window -t "$SESSION:" -c "$DIR"
-  fi
-  tmux attach -t "$SESSION"
-}
-
-# . "$HOME/.local/bin/env"
