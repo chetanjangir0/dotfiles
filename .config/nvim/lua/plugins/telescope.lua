@@ -21,6 +21,12 @@ return {
 					},
 				},
 
+				pickers = {
+					colorscheme = {
+						enable_preview = true,
+					},
+				},
+
 				-- for files preview in side bar
 				defaults = {
 					mappings = {

@@ -1,4 +1,5 @@
 return {
+  { "RRethy/base16-nvim" },
 	{
 		"catppuccin/nvim",
 		lazy = false,
@@ -9,6 +10,14 @@ return {
 				transparent_background = true,
 			})
 			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
+	},
+	{
+		"vague2k/vague.nvim",
+		config = function()
+			require("vague").setup({
+				transparent = true,
+			})
 		end,
 	},
 }

@@ -19,3 +19,6 @@ map("n", "<A-m>", "%", { noremap = true, silent = true })
 -- better indenting in visual mode
 map("v", "<", "<gv", { desc = "indent left and reselect" })
 map("v", ">", ">gv", { desc = "indent right and reselect" })
+
+-- use telescope to change colorscheme
+map("n", "<C-n>", ":Telescope colorscheme<CR>", { desc = "Pick Colorscheme" })
