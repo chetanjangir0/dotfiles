@@ -9,7 +9,7 @@ return {
 			require("catppuccin").setup({
 				transparent_background = true,
 			})
-			vim.cmd.colorscheme("catppuccin-mocha")
+			-- vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 	},
 	{
@@ -18,6 +18,7 @@ return {
 			require("vague").setup({
 				transparent = true,
 			})
+			vim.cmd.colorscheme("vague")
 		end,
 	},
 }
