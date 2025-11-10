@@ -27,7 +27,6 @@ return {
 					},
 				},
 
-				-- for files preview in side bar
 				defaults = {
 					mappings = {
 						i = { -- Insert mode mappings
@@ -39,6 +38,7 @@ return {
 							["<C-k>"] = actions.move_selection_previous,
 						},
 					},
+          -- for files preview in side bar
 					layout_config = {
 						horizontal = {
 							preview_cutoff = 0,
