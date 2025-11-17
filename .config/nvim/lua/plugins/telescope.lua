@@ -28,16 +28,16 @@ return {
 				},
 
 				defaults = {
-					mappings = {
-						i = { -- Insert mode mappings
-							["<C-j>"] = actions.move_selection_next,
-							["<C-k>"] = actions.move_selection_previous,
-						},
-						n = { -- Normal mode mappings (optional)
-							["<C-j>"] = actions.move_selection_next,
-							["<C-k>"] = actions.move_selection_previous,
-						},
-					},
+					-- mappings = {
+					-- 	i = { -- Insert mode mappings
+					-- 		["<C-j>"] = actions.move_selection_next,
+					-- 		["<C-k>"] = actions.move_selection_previous,
+					-- 	},
+					-- 	n = { -- Normal mode mappings (optional)
+					-- 		["<C-j>"] = actions.move_selection_next,
+					-- 		["<C-k>"] = actions.move_selection_previous,
+					-- 	},
+					-- },
           -- for files preview in side bar
 					layout_config = {
 						horizontal = {
