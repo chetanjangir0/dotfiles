@@ -144,3 +144,4 @@ alias music='termusic'
 alias bb='blueboy'
 alias bt='bluetoothctl connect 98:47:44:15:9D:6A'
 alias rebuild='sudo nixos-rebuild switch --flake .#laptop'
+alias vim=nvim
