@@ -12,6 +12,7 @@ return {
         "rust_analyzer",
         "gopls",
         "tinymist",
+        "svelte-language-server",
       })
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -20,7 +21,6 @@ return {
       vim.keymap.set("n", "<leader>dm", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
       vim.keymap.set("n", "<leader>dl", require("telescope.builtin").diagnostics, { buffer = 0 })
       vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { buffer = 0 })
-
 
       -- Configure built-in diagnostic display
       vim.diagnostic.config({
