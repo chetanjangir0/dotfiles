@@ -1,6 +1,5 @@
 require("set")
 require("remap")
-require("config.lazy")
 
 -- markdown text wrapping
 vim.api.nvim_create_autocmd("FileType", {
@@ -23,5 +22,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end
 	end,
 })
-
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
+
+-- package manager
+require("config.lazy")

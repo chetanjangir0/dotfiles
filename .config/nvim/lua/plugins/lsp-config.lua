@@ -12,7 +12,8 @@ return {
         "rust_analyzer",
         "gopls",
         "tinymist",
-        "svelte-language-server",
+        "svelte",
+        "svelteserver"
       })
 
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
