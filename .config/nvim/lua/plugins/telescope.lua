@@ -7,9 +7,9 @@ return {
 		config = function()
 			local builtin = require("telescope.builtin")
 
-			-- vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>ff", function()
-				builtin.find_files({ hidden = true }) -- show dotfiles
+			vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+			vim.keymap.set("n", "<leader>jf", function()
+				builtin.find_files({ no_ignore = true, hidden = true }) -- show dotfiles
 			end, {})
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
@@ -36,7 +36,7 @@ return {
 							preview_cutoff = 0,
 						},
 					},
-					-- file_ignore_patterns = { "node_modules/", ".git/" },
+					file_ignore_patterns = { "node_modules/", ".git/" },
 				},
 			})
 
