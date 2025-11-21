@@ -22,3 +22,6 @@ map("v", ">", ">gv", { desc = "indent right and reselect" })
 
 -- use telescope to change colorscheme
 map("n", "<C-n>", ":Telescope colorscheme<CR>", { desc = "Pick Colorscheme" })
+
+-- file navigations
+map({ "n" }, "<leader>a", ":edit #<CR>", { desc = "Switch to last file" })
