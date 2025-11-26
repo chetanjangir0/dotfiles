@@ -1,7 +1,7 @@
 {
   "keyMappings": "# Insert your preferred key mappings here.\nmap J nextTab\nmap K previousTab",
   "grabBackFocus": true,
-  "settingsVersion": "2.3",
+  "settingsVersion": "2.3.1",
   "exclusionRules": [
     {
       "passKeys": "",
@@ -34,6 +34,18 @@
     {
       "passKeys": "",
       "pattern": "https?://eyglobal.yello.co/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://leetcode.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://neetcode.io/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://svelte.dev/*"
     }
   ]
 }
