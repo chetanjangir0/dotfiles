@@ -5,6 +5,10 @@ vlc = [
   { run = 'vlc "$@"', orphan = true, desc = "VLC" }
 ]
 
+mpv= [
+  { run = 'mpv "$@"', orphan = true, desc = "mpv" }
+]
+
 
 zathura = [
   { run = 'zathura "$@"', orphan = true, desc = "Zathura PDF Reader" }
@@ -16,7 +20,7 @@ nsxiv = [
 
 [open]
 rules = [
-  { mime = "video/*", use = ["vlc"] },
+  { mime = "video/*", use = ["mpv"] },
   { mime = "application/pdf", use = ["zathura"] },
   { mime = "image/*", use = ["nsxiv"] }
 ]
