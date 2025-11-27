@@ -20,8 +20,8 @@ return {
       vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {}) -- default is gra
       vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
       vim.keymap.set("n", "<leader>dm", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-      vim.keymap.set("n", "<leader>dl", require("telescope.builtin").diagnostics, { buffer = 0 })
-      vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references, { buffer = 0 })
+      vim.keymap.set("n", "<leader>dl", require("telescope.builtin").diagnostics)
+      vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references)
 
       -- Configure built-in diagnostic display
       vim.diagnostic.config({
