@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+default_machine="aeldari"
+
+if [[ $# -ne 1 ]]; then
+    sudo nixos-rebuild switch --flake $HOME/nixdot/#$default_machine
+else
+    sudo nixos-rebuild switch --flake $HOME/nixdot/#$1
+fi
