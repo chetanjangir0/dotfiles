@@ -22,6 +22,8 @@ include /etc/sway/config-vars.d/*
 #          timeout 300 'swaylock -f -c 000000' \
 #          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 #          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w before-sleep 'swaylock -f -c 000000'
+bindsym Control+$mod+l exec swaylock -f -c 000000
 
 ### Input configuration
 
