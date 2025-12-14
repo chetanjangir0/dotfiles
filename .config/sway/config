@@ -218,7 +218,7 @@ bindsym $mod+b exec zen
 bindsym $mod+n exec cosmic-files --no-desktop
 
 # logout
-bindsym Control+Mod1+Delete exec "swaymsg exit"
+bindsym Control+$mod+Delete exec "swaymsg exit"
 
 # screenshots
 ## copy ss to clipboard

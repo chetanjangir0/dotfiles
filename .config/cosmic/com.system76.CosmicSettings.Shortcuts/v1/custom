@@ -1,67 +1,11 @@
 {
     (
         modifiers: [
-            Alt,
-        ],
-        key: "w",
-    ): Close,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "f",
-    ): Maximize,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "slash",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "j",
-    ): Focus(Down),
-    (
-        modifiers: [
             Super,
             Shift,
         ],
-        key: "8",
+        key: "Escape",
     ): Disable,
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
-        key: "3",
-    ): MoveToWorkspace(3),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "4",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "9",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "1",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "h",
-    ): Focus(Left),
     (
         modifiers: [
             Super,
@@ -70,30 +14,88 @@
     ): Focus(Up),
     (
         modifiers: [
-            Alt,
-        ],
-        key: "7",
-    ): Workspace(7),
-    (
-        modifiers: [
-            Alt,
+            Super,
             Shift,
         ],
-        key: "9",
-    ): MoveToWorkspace(9),
+        key: "4",
+    ): MoveToWorkspace(4),
     (
         modifiers: [
             Alt,
         ],
-        key: "6",
-    ): Workspace(6),
+        key: "t",
+    ): Spawn("rofi -dmenu -p \"ChatGPT:\" | xargs -I {} xdg-open \"https://chat.openai.com/?q={}\""),
     (
         modifiers: [
             Super,
             Shift,
         ],
-        key: "6",
+        key: "8",
+    ): MoveToWorkspace(8),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "slash",
     ): Disable,
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "3",
+    ): MoveToWorkspace(3),
+    (
+        modifiers: [
+            Super,
+            Ctrl,
+        ],
+        key: "Delete",
+    ): System(LogOut),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "space",
+    ): System(Launcher),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "7",
+    ): MoveToWorkspace(7),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "j",
+    ): Focus(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "k",
+    ): Focus(Up),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "5",
+    ): MoveToWorkspace(5),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+    ): System(Terminal),
     (
         modifiers: [
             Super,
@@ -103,184 +105,47 @@
     ): Disable,
     (
         modifiers: [
-            Ctrl,
-            Alt,
-        ],
-        key: "Delete",
-    ): System(LogOut),
-    (
-        modifiers: [
             Super,
         ],
-        key: "1",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
-        key: "7",
-    ): MoveToWorkspace(7),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "k",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
-        key: "1",
-    ): MoveToWorkspace(1),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "Return",
-    ): System(Terminal),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "7",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "l",
     ): Disable,
     (
         modifiers: [
             Super,
         ],
         key: "h",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "4",
-    ): Workspace(4),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "k",
-    ): Focus(Up),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "7",
-    ): Disable,
+    ): Focus(Left),
     (
         modifiers: [
             Super,
             Shift,
-        ],
-        key: "Escape",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "space",
-    ): System(Launcher),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "2",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "5",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "2",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "4",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "1",
-    ): Workspace(1),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "t",
-    ): Spawn("rofi -dmenu -p \"ChatGPT:\" | xargs -I {} xdg-open \"https://chat.openai.com/?q={}\""),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "2",
-    ): Workspace(2),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "3",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "8",
-    ): Workspace(8),
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
-        key: "8",
-    ): MoveToWorkspace(8),
-    (
-        modifiers: [
-            Super,
         ],
         key: "6",
-    ): Disable,
+    ): MoveToWorkspace(6),
     (
         modifiers: [
-            Alt,
-            Shift,
+            Super,
         ],
-        key: "5",
-    ): MoveToWorkspace(5),
+        key: "w",
+    ): Close,
     (
         modifiers: [
-            Alt,
-            Shift,
+            Super,
         ],
-        key: "4",
-    ): MoveToWorkspace(4),
+        key: "f",
+    ): Fullscreen,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "l",
+    ): Focus(Right),
     (
         modifiers: [
             Super,
             Shift,
         ],
-        key: "3",
-    ): Disable,
+        key: "9",
+    ): MoveToWorkspace(9),
     (
         modifiers: [
             Super,
@@ -292,68 +157,6 @@
             Super,
             Shift,
         ],
-        key: "9",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "m",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "l",
-    ): Focus(Right),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "5",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "3",
-    ): Workspace(3),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "9",
-    ): Workspace(9),
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
-        key: "6",
-    ): MoveToWorkspace(6),
-    (
-        modifiers: [
-            Alt,
-            Shift,
-        ],
         key: "2",
     ): MoveToWorkspace(2),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "8",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "j",
-    ): Disable,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "5",
-    ): Workspace(5),
 }
