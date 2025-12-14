@@ -225,7 +225,7 @@ bindsym Control+$mod+Delete exec "swaymsg exit"
 bindsym Print exec grim -g "$(slurp)" - | wl-copy 
 ## copy ocr text to clipboard 
 bindsym $mod+Print exec grim -g "$(slurp)" - | tesseract stdin stdout | wl-copy
-## copy and save ss to clipboard 
+## save ss to files 
 bindsym $mod+Shift+Print exec grim -g "$(slurp)" ~/Pictures/region-screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png # for saving the file
 
 # OBS Studio screen capture fix
