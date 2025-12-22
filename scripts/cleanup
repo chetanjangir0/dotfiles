@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Delete old system generations (keep last 5)
+sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +5
+
+# Delete old user profile generations
+nix-collect-garbage -d
+
+# Delete old boot entries
+sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old
+
+# Run garbage collection
+sudo nix store gc
+
+# Optimize store
+sudo nix store optimise
