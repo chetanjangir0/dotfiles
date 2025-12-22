@@ -13,11 +13,17 @@ sudo nixos-rebuild switch --flake "$HOME/nixdot/#$machine" &>nixos-switch.log ||
 
 read -rp "Extra commit message (optional): " custom_msg
 
-gen=$(nixos-rebuild list-generations | grep current)
+gen=$(nixos-rebuild list-generations | awk '$NF == "True" {print $1 " " $2 " " $3; exit}')
 
 commit_msg="$gen"
 [[ -n "$custom_msg" ]] && commit_msg="$gen : $custom_msg"
+
 git add .
-git commit -m "$gen"
-git push
+if git diff --cached --quiet; then
+  echo "No changes to commit."
+else
+  git commit -m "$commit_msg"
+  git push
+fi
+
 popd
