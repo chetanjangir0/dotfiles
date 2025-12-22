@@ -1,9 +1,23 @@
 #!/usr/bin/env bash
 
 default_machine="aeldari"
+machine="${1:-$default_machine}"
 
-if [[ $# -ne 1 ]]; then
-    sudo nixos-rebuild switch --flake $HOME/nixdot/#$default_machine
-else
-    sudo nixos-rebuild switch --flake $HOME/nixdot/#$1
-fi
+set -e
+pushd ~/nixdot/
+nvim
+git diff -U0 *.nix
+echo "NixOS Rebuilding... "
+sudo nixos-rebuild switch --flake "$HOME/nixdot/#$machine" &>nixos-switch.log || (
+  cat nixos-switch.log | grep --color error && false)
+
+read -rp "Extra commit message (optional): " custom_msg
+
+gen=$(nixos-rebuild list-generations | grep current)
+
+commit_msg="$gen"
+[[ -n "$custom_msg" ]] && commit_msg="$gen : $custom_msg"
+git add .
+git commit -m "$gen"
+git push
+popd
