@@ -26,7 +26,7 @@
     },
     "clock": {
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%d %b}"
+        "format-alt": "{:%a, %d %b}"
       
     },
     "memory": {
