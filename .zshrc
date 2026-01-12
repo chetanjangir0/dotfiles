@@ -146,3 +146,4 @@ alias bt='bluetoothctl connect 98:47:44:15:9D:6A'
 alias vim=nvim
 alias nix-shell='NIXPKGS_ALLOW_UNFREE=1 nix-shell'
 alias ta='tmux attach'
+alias lg='lazygit'
