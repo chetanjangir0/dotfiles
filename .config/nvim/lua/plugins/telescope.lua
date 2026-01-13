@@ -27,16 +27,26 @@ return {
 				},
 
 				defaults = {
+					preview = { treesitter = true },
 					color_devicons = true,
-					preview = { treesitter = false },
-					path_displays = { "smart" },
-					-- for files preview in side bar
-					layout_config = {
-						horizontal = {
-							preview_cutoff = 0,
-						},
+					sorting_strategy = "ascending",
+					borderchars = {
+						"", -- top
+						"", -- right
+						"", -- bottom
+						"", -- left
+						"", -- top-left
+						"", -- top-right
+						"", -- bottom-right
+						"", -- bottom-left
 					},
-					file_ignore_patterns = { "node_modules/", ".git/" },
+					path_displays = { "smart" },
+					layout_config = {
+						height = 100,
+						width = 400,
+						prompt_position = "top",
+						preview_cutoff = 40,
+					},
 				},
 			})
 
