@@ -147,3 +147,4 @@ alias vim=nvim
 alias nix-shell='NIXPKGS_ALLOW_UNFREE=1 nix-shell'
 alias ta='tmux attach'
 alias lg='lazygit'
+alias opp='onepdfplease'
