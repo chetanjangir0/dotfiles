@@ -24,6 +24,7 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.nixfmt,
 				null_ls.builtins.formatting.typstfmt,
+        null_ls.builtins.formatting.black,
 				require("none-ls.diagnostics.eslint").with({ condition = has_eslint }),
 			},
 		})
