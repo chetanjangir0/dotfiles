@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-options="Shutdown\nReboot\nSuspend\nLogout"
+options="shutdown\nreboot\nsuspend\nlogout"
 
 chosen=$(echo -e "$options" | rofi -dmenu -p "Power")
 
