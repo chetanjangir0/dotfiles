@@ -5,16 +5,16 @@ options="shutdown\nreboot\nsuspend\nlogout"
 chosen=$(echo -e "$options" | rofi -dmenu -p "Power")
 
 case "$chosen" in
-    Shutdown)
+    shutdown)
         systemctl poweroff
         ;;
-    Reboot)
+    reboot)
         systemctl reboot
         ;;
-    Suspend)
+    suspend)
         systemctl suspend
         ;;
-    Logout)
+    logout)
         swaymsg exit
         ;;
 esac
