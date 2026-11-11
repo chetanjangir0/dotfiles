@@ -1,23 +1,87 @@
+# Ghostty Configuration
+# Matched to Alacritty (Catppuccin Mocha with #0f0f0f background)
+
+# -----------------------------------------------------------------------------
+# Color Scheme & Theme
+# -----------------------------------------------------------------------------
 theme = Catppuccin Mocha
+
+# Background override: Alacritty overrides Catppuccin Mocha's #1E1E2E with 0x0f0f0f
+background = #0f0f0f
+foreground = #cdd6f4
+
+# Optional: Background opacity (matches commented # opacity = 0.8 in Alacritty)
 # background-opacity = 0.8
 
+# Selection colors matching Catppuccin Mocha
+selection-foreground = #1e1e2e
+selection-background = #f5e0dc
+
+# Catppuccin Mocha extended palette (indices 16 and 17)
+palette = 16=#fab387
+palette = 17=#f5e0dc
+
+# Bright colors matching Alacritty's catppuccin-mocha.toml
+palette = 9=#f38ba8
+palette = 10=#a6e3a1
+palette = 11=#f9e2af
+palette = 12=#89b4fa
+palette = 13=#f5c2e7
+palette = 14=#94e2d5
+palette = 15=#a6adc8
+
+# -----------------------------------------------------------------------------
+# Typography
+# -----------------------------------------------------------------------------
 font-family = "CaskaydiaCove Nerd Font"
 font-size = 14.0
-selection-foreground = #1E1E2E
-selection-background = #F5E0DC
 
-# don't show resize text
-resize-overlay = never 
+# Cascadia Code / CaskaydiaCove has ligatures. Alacritty does not support ligatures
+# by default. Ghostty enables them by default. If you prefer no ligatures like Alacritty,
+# uncomment the line below:
+# font-feature = -calt
 
-# background
-background = "#000000"
-
-# cursor
+# -----------------------------------------------------------------------------
+# Cursor
+# -----------------------------------------------------------------------------
+# Cursor appearance matching Alacritty
 cursor-style = block
 cursor-style-blink = false
+cursor-color = #f5e0dc
+cursor-text = #1e1e2e
+
+# Prevent Ghostty's shell integration from changing block cursor to a beam/bar
 shell-integration-features = no-cursor
 
-# character under the cusror looked a bit indistinguitable
-cursor-invert-fg-bg = false
-cursor-text = "#000000"
+# -----------------------------------------------------------------------------
+# Mouse & Selection Behavior
+# -----------------------------------------------------------------------------
+# Matches Alacritty's `save_to_clipboard = true`:
+# Automatically copies selected text to both Primary selection and System Clipboard
+copy-on-select = both
 
+# Hide mouse pointer while typing (Alacritty default: hide_when_typing = true)
+mouse-hide-while-typing = true
+
+# -----------------------------------------------------------------------------
+# Window & Layout
+# -----------------------------------------------------------------------------
+# Disable GTK client-side decorations/headerbar so Sway/window manager controls borders
+window-decoration = false
+
+# Never show GUI scrollbar (Alacritty has no scrollbar)
+scrollbar = never
+
+# Do not show dimension overlay on resize (Alacritty has no resize overlay)
+resize-overlay = never
+
+# Window padding (Alacritty defaults to 0 padding)
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+
+# -----------------------------------------------------------------------------
+# Environment
+# -----------------------------------------------------------------------------
+# Matches Alacritty's [env] TERM = "xterm-256color"
+term = xterm-256color
