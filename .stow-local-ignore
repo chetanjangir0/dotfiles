@@ -25,3 +25,4 @@ _darcs
 #custom
 browser
 .luarc.json
+.zshrc # since home mangers is already generting it
