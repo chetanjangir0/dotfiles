@@ -1,0 +1,18 @@
+# Custom Keybindings for Yazi
+
+# Official mount manager for USB pendrives & external disks
+[[mgr.prepend_keymap]]
+on   = "M"
+run  = "plugin mount"
+desc = "Open mount manager (mount/unmount/eject disks)"
+
+# Quick jumps for Removable & Mobile Devices
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd /run/user/1000/gvfs"
+desc = "Go to Phone (MTP storage via GVFS)"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "u" ]
+run  = "cd /run/media/chetan"
+desc = "Go to USB drives"

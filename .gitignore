@@ -5,3 +5,7 @@
 .config/obs-studio/profiler_data/
 .config/obs-studio/updates/
 .config/obs-studio/service.json
+
+# Yazi packages (managed via `package.toml` and `ya pkg install`)
+.config/yazi/plugins/
+.config/yazi/flavors/
