@@ -1,26 +1,26 @@
-
 [opener]
+play = [
+  { run = 'mpv %s', orphan = true, desc = "mpv", for = "unix" },
+]
+mpv = [
+  { run = 'mpv %s', orphan = true, desc = "mpv", for = "unix" },
+]
 vlc = [
-  # { run = 'flatpak run org.videolan.VLC "$@"', orphan = true, desc = "VLC Flatpak" }
-  { run = 'vlc "$@"', orphan = true, desc = "VLC" }
+  { run = 'vlc %s', orphan = true, desc = "VLC", for = "unix" },
 ]
-
-mpv= [
-  { run = 'mpv "$@"', orphan = true, desc = "mpv" }
-]
-
-
 zathura = [
-  { run = 'zathura "$@"', orphan = true, desc = "Zathura PDF Reader" }
+  { run = 'zathura %s', orphan = true, desc = "Zathura PDF Reader", for = "unix" },
 ]
-
 nsxiv = [
-  { run = 'nsxiv "$@"', orphan = true, desc = "nsxiv Image Viewer" }
+  { run = 'nsxiv %s', orphan = true, desc = "nsxiv Image Viewer", for = "unix" },
 ]
 
 [open]
-rules = [
-  { mime = "video/*", use = ["mpv"] },
-  { mime = "application/pdf", use = ["zathura"] },
-  { mime = "image/*", use = ["nsxiv"] }
+prepend_rules = [
+  { mime = "{audio,video}/*", use = [ "play", "mpv" ] },
+  { url = "*.{mp4,mkv,avi,mov,webm,flv,wmv,m4v,mp3,wav,ogg,flac,m4a}", use = [ "play", "mpv" ] },
+  { mime = "application/pdf", use = [ "zathura" ] },
+  { url = "*.pdf", use = [ "zathura" ] },
+  { mime = "image/*", use = [ "nsxiv" ] },
+  { url = "*.{jpg,jpeg,png,webp,gif,svg,bmp,ico,tiff}", use = [ "nsxiv" ] },
 ]
